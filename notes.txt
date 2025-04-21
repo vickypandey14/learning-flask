@@ -1,0 +1,46 @@
+Flask Learning – Day 1 Notes
+
+1. Installed Python.  
+2. Installed pip.  
+3. Created a new folder for learning Flask.  
+4. Inside that folder, created a virtual environment using:  
+
+   `python -m venv env`
+
+5. Encountered a PowerShell script execution error while trying to activate the virtual environment:
+ 
+   `File ... cannot be loaded because running scripts is disabled on this system.`
+
+6. Resolved it by running this command in PowerShell (as Administrator):
+
+    `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
+
+7. Successfully activated the virtual environment using:
+
+   `.\env\Scripts\Activate.ps1`
+
+8. Created a `requirements.txt` file.
+
+9. Installed Flask using:
+
+   `pip install flask`
+
+10. Updated the `requirements.txt` file with the installed packages using:
+
+    `pip freeze > requirements.txt`
+
+11. Learned how to deactivate the virtual environment using:
+
+    `deactivate`
+
+12. Created a simple Flask application in `app.py` with the following steps:
+    - Imported `Flask` from the `flask` module.
+    - Created a Flask application instance using `Flask(__name__)`.
+    - Defined a route (`/`) that returns "Hello, World!".
+    - Added a conditional block to run the application in debug mode.
+
+13. Learned how to run the Flask project using:
+
+    `python app.py`
+
+    After running the command, the application can be accessed in the browser at `http://127.0.0.1:5000/`.
