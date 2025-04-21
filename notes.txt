@@ -44,3 +44,15 @@ Flask Learning – Day 1 Notes
     `python app.py`
 
     After running the command, the application can be accessed in the browser at `http://127.0.0.1:5000/`.
+
+14. Updated the `app.py` file with the following features:
+
+    - Added a route (`/about`) that displays an about page.
+
+    - Created a dynamic route (`/user/<username>/<age>`) to display a user profile page with a username and age.
+
+    - Added a route (`/post/<int:post_id>`) to handle GET requests and display a specific post by its ID.
+    
+    - Implemented a route (`/submit`) to handle both GET and POST requests:
+        - If the method is POST, it returns a success message for form submission.
+        - If the method is GET, it prompts the user to try submitting the form again.
