@@ -31,6 +31,8 @@ def submit_form():
     else:
         return 'Please try to submit the form again!'
 
+# Template rendering example
+
 @app.route('/template')
 def template_example():
     return render_template('index.html')
