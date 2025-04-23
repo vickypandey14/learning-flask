@@ -56,3 +56,26 @@ Flask Learning – Day 1 Notes
     - Implemented a route (`/submit`) to handle both GET and POST requests:
         - If the method is POST, it returns a success message for form submission.
         - If the method is GET, it prompts the user to try submitting the form again.
+
+Flask Learning – Day 2 Notes
+
+1. Learned how to use templates in Flask to render dynamic HTML pages.
+
+2. Created a `templates` folder and added the following files:
+    - `index.html`: A simple HTML page with a Bootstrap-styled heading.
+    - `user.html`: A dynamic HTML page to display user details and a list of skills.
+
+3. Updated the `app.py` file with the following features:
+    - Added a route (`/template`) to render the `index.html` file using the `render_template` function.
+    - Added a route (`/user-template/<username>/<age>`) to render the `user.html` file dynamically:
+        - Passed the `username` and `age` as variables to the template.
+        - Included a list of skills (`['Laravel', 'Flask', 'Django', 'PHP', 'JavaScript', 'Python']`) to display in the template.
+
+4. Learned how to use Jinja2 templating in Flask:
+    - Used `{{ name }}` and `{{ user_age }}` in `user.html` to display dynamic data.
+    - Used a `for` loop in Jinja2 to iterate over the list of skills and display them as a list.
+    - Added an `else` block in the `for` loop to handle cases where the list is empty.
+
+5. Tested the application by running `python app.py` and accessing the following routes:
+    - `http://127.0.0.1:5000/template` to view the `index.html` page.
+    - `http://127.0.0.1:5000/user-template/<username>/<age>` (e.g., `/user-template/Vivek/25`) to view the dynamic user profile page.

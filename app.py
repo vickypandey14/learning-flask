@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, render_template
 
 app = Flask(__name__)
 
@@ -30,6 +30,15 @@ def submit_form():
         return 'Your Form has been submitted!'
     else:
         return 'Please try to submit the form again!'
+
+@app.route('/template')
+def template_example():
+    return render_template('index.html')
+
+@app.route('/user-template/<username>/<age>')
+def user_template(username, age):
+    items = ['Laravel', 'Flask', 'Django', 'PHP', 'JavaScript', 'Python']
+    return render_template('user.html', name=username, user_age=age, skills=items)
 
 if __name__ == '__main__':
     app.run(debug=True)
