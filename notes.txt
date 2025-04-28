@@ -79,3 +79,11 @@ Flask Learning – Day 2 Notes
 5. Tested the application by running `python app.py` and accessing the following routes:
     - `http://127.0.0.1:5000/template` to view the `index.html` page.
     - `http://127.0.0.1:5000/user-template/<username>/<age>` (e.g., `/user-template/Vivek/25`) to view the dynamic user profile page.
+
+
+Flask Learning – Day 3 Notes
+
+1. Enhanced the `index.html` file to improve the design and layout:
+
+    - Added a Bootstrap-styled container to structure the content.
+    - Used the `url_for` function to dynamically link the Bootstrap CSS file and the image file (`logo.png`) from the `static` folder.
