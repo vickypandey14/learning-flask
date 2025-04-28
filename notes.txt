@@ -87,3 +87,11 @@ Flask Learning – Day 3 Notes
 
     - Added a Bootstrap-styled container to structure the content.
     - Used the `url_for` function to dynamically link the Bootstrap CSS file and the image file (`logo.png`) from the `static` folder.
+
+2. Completed form submission and MySQL database connection setup in Flask:
+
+Built a form to capture user input.
+
+Configured MySQL database connection parameters within the Flask app.
+
+Implemented form handling routes and successfully inserted form data into the database.
