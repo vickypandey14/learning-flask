@@ -1,6 +1,13 @@
 from flask import Flask, request, render_template
+from flask_sqlalchemy import SQLAlchemy
+import pymysql
+
+pymysql.install_as_MySQLdb()
 
 app = Flask(__name__)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost/flask_db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 @app.route('/')
 def hello_world():
@@ -41,6 +48,31 @@ def template_example():
 def user_template(username, age):
     items = ['Laravel', 'Flask', 'Django', 'PHP', 'JavaScript', 'Python']
     return render_template('user.html', name=username, user_age=age, skills=items)
+
+# Handle Form submission example
+
+db = SQLAlchemy(app)
+
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(50), nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    phone = db.Column(db.String(15), nullable=False)
+
+@app.route('/submit-form', methods=['GET', 'POST'])
+def submit_form_example():
+    if request.method == 'POST':
+        name = request.form['name']
+        email = request.form['email']
+        phone = request.form['phone']
+
+        new_user = User(name=name, email=email, phone=phone)
+        db.session.add(new_user)
+        db.session.commit()
+
+        return f'Form submitted successfully!'
+    return render_template('form.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
