@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
 from flask_sqlalchemy import SQLAlchemy
+from form import MyForm
 import pymysql
 
 pymysql.install_as_MySQLdb()
@@ -61,6 +62,7 @@ class User(db.Model):
 
 @app.route('/submit-form', methods=['GET', 'POST'])
 def submit_form_example():
+    form = MyForm()
     if request.method == 'POST':
         name = request.form['name']
         email = request.form['email']
