@@ -95,3 +95,7 @@ Built a form to capture user input.
 Configured MySQL database connection parameters within the Flask app.
 
 Implemented form handling routes and successfully inserted form data into the database.
+
+Flask Learning – Day 4 Notes
+
+1. Form Data Validation & Error Handling
