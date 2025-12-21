@@ -1,8 +1,8 @@
-# Learning Flask 🚀
+# Learning Flask
 
 This repository is a personal journey into learning and mastering the Flask framework. It includes beginner-friendly examples, hands-on projects, and useful notes to help reinforce core concepts of Flask web development.
 
-## 📁 Structure
+## Structure
 
 - `app.py` – Main application file with route definitions and logic.
 - `templates/` – HTML templates rendered using Jinja2.
@@ -10,7 +10,7 @@ This repository is a personal journey into learning and mastering the Flask fram
 - `requirements.txt` – List of required Python packages.
 - `notes.txt` – Personal learning notes and observations.
 
-## 🛠️ Getting Started
+## Getting Started
 
 1. Clone the repository:
    ```bash
@@ -36,7 +36,7 @@ This repository is a personal journey into learning and mastering the Flask fram
    python app.py
    ```
 
-## 🧠 Purpose
+## Purpose
 
 This repo is created to:
 
